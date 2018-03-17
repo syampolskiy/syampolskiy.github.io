@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="17px" height="24px" viewBox="0 0 17 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.1 (51147) - http://www.bohemiancoding.com/sketch -->
+    <title>ic_phone</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Afilliates" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="AffiliateMinisite_rev" transform="translate(-863.000000, -2584.000000)" stroke="#AFB6D2" stroke-width="1.5">
+            <g id="contact" transform="translate(0.000000, 2102.000000)">
+                <g id="write-us">
+                    <g id="phone" transform="translate(699.000000, 469.000000)">
+                        <g transform="translate(145.000000, 0.000000)" id="ic_phone">
+                            <path d="M34.6662816,34.7359574 L31.4386919,28.5071952 C31.4322752,28.5108618 29.630105,29.3972803 29.5466882,29.433947 C27.4933508,30.429449 23.3142593,22.2655996 25.3217632,21.1894308 L27.2302669,20.2489289 L24.0292607,14 C24.0274273,14.0009167 22.1299236,14.9368352 22.0987569,14.9524185 C15.4969106,18.3945086 25.9790145,38.7692987 32.7321111,35.6828759 C32.843028,35.6324592 34.6589482,34.7396241 34.6662816,34.7359574"></path>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

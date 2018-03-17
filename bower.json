@@ -1,0 +1,10 @@
+{
+  "name": "tmpl",
+  "dependencies": {
+    "jquery.form-styler": "^2.0.2",
+    "jquery": "^3.3.1",
+    "bootstrap": "^4.0.0",
+    "tether": "^1.4.3",
+    "popper.js": "^1.14.1"
+  }
+}

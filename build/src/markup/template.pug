@@ -1,0 +1,37 @@
+//- template page
+- var css = "css/";
+- var js = "js/";
+- var vendor = "vendor/";
+- var i = "img/";
+
+doctype html
+html(lang='en')
+	head
+		meta(name='viewport', content='width=device-width')
+		
+		title Default
+		
+		block styles
+		
+		<link href="https://fonts.googleapis.com/css?family=Poppins:400,500,600,700" rel="stylesheet">
+		//- link(href=vendor + 'jquery.form-styler/jquery.formstyler.css', rel='stylesheet')
+		//- link(href=vendor + 'jquery.form-styler/jquery.formstyler.theme.css', rel='stylesheet')
+		//- link(href=vendor + 'bootstrap/css/bootstrap-grid.min.css', rel='stylesheet')
+		link(href=vendor + 'bootstrap/css/bootstrap.min.css', rel='stylesheet')
+		link(href=vendor + 'bootstrap-select-v4/css/bootstrap-select.min.css', rel='stylesheet')
+		link(href=css + 'main.css', rel='stylesheet')
+	body
+		include blocks/header/header
+
+		block any
+	
+		main
+			block content
+
+		script(src=vendor + 'jquery.min.js')
+		script(src=vendor + 'popper.min.js')
+		script(src=vendor + 'tether/js/tether.min.js')
+		script(src=vendor + 'bootstrap/js/bootstrap.min.js')
+		script(src=vendor + 'bootstrap-select-v4/js/bootstrap-select.min.js')
+		//- script(src=vendor + 'jquery.form-styler/jquery.formstyler.min.js')
+		script(src=js + "js.js")

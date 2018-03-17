@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="14px" height="8px" viewBox="0 0 14 8" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.1 (51147) - http://www.bohemiancoding.com/sketch -->
+    <title>down-arrow</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="_navi" transform="translate(-1330.000000, -25.000000)" fill="#97A5B8" stroke="#97A5B8">
+            <g id="down-arrow">
+                <path d="M1342.87722,26.1236715 C1342.71183,25.9587762 1342.44306,25.9587762 1342.27767,26.1236715 L1337.0058,31.3900161 L1331.72359,26.1236715 C1331.5582,25.9587762 1331.28944,25.9587762 1331.12404,26.1236715 C1330.95865,26.2885668 1330.95865,26.5565217 1331.12404,26.7214171 L1336.69569,32.2763285 C1336.77839,32.3587762 1336.88176,32.4 1336.99546,32.4 C1337.09883,32.4 1337.21254,32.3587762 1337.29524,32.2763285 L1342.86688,26.7214171 C1343.04261,26.5565217 1343.04261,26.2885668 1342.87722,26.1236715 L1342.87722,26.1236715 Z"></path>
+            </g>
+        </g>
+    </g>
+</svg>

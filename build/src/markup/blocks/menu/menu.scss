@@ -1,0 +1,25 @@
+.menu{
+	background: #FFF;
+	box-shadow: 0 2px 15px 0 rgba(127,177,223,0.3);
+	.navbar{
+		padding: 10px 0;
+	}
+	.navbar-collapse{
+		display: flex;
+		justify-content: center;
+	}
+	.nav-link{
+		color: #97A5B8;
+		font-size: 15px;
+		font-weight: 600;
+		line-height: 25px;
+		letter-spacing: .5px;
+		&:hover{
+			color: #000;
+		}
+	}
+	.nav-item{
+		margin-left: 42px;
+		margin-right: 42px;
+	}
+}
