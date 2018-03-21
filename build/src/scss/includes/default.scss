@@ -12,7 +12,7 @@ html {
 }
 
 body {
-    min-width: 1200px;
+    min-width: 320px;
     -ms-overflow-style: scrollbar;
     backface-visibility: hidden;
     font-family: 'Poppins', sans-serif;
@@ -106,6 +106,10 @@ textarea {
     padding: 0 30px;
     margin: 0 auto;
     width: 1200px;
+    @include max(767){
+        padding-left: 15px;
+        padding-right: 15px;
+    }
 }
 
 .hidden {

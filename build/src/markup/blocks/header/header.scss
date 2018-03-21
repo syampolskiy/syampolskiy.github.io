@@ -101,10 +101,17 @@ select.selectpicker{
 	background-color: #FFFFFF;
 	box-shadow: 0 5px 15px 0 rgba(127,177,223,0.3);
 	padding: 10px 0 13px;
+	@include max(767){
+		padding-bottom: 10px;
+		padding-top: 8px;
+	}
 	&__container{
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
+		@include max(767){
+			justify-content: center;
+		}
 	}
 	&__side{
 		display: flex;
@@ -113,11 +120,18 @@ select.selectpicker{
 		.simple-btn + .simple-btn{
 			margin-left: 29.5px;
 		}
+		@include max(767){
+			display: none;
+		}
 	}
 }
 .logo{
 	img{
 		height: 60px;
 		width: 118px;
+		@include max(767){
+			width: 65px;
+			height: 32px;
+		}
 	}
 }

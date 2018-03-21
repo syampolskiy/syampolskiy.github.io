@@ -21,5 +21,12 @@
 	.nav-item{
 		margin-left: 42px;
 		margin-right: 42px;
+		@include max(991){
+			margin-left: 16px;
+			margin-right: 16px;
+		}
+	}
+	@include max(767){
+		display: none;
 	}
 }

@@ -3,14 +3,26 @@ h1{
 	font-size: 35px;
 	font-weight: 500;
 	line-height: 45px;
+	@include max(767){
+		font-size: 22px;
+		line-height: 24px;
+	}
 }
+
 .simple-btn{
-	color: #31CE03;
+	color: $c_green;
+	@include max(767){
+		color: $c_green-light;
+		font-weight: 500;
+	}
 	font-size: 14px;
 	font-weight: bold;
 	line-height: 23px;
 	text-align: center;
-	border: 1px solid #31CE03;
+	border: 1px solid $c_green;
+	@include max(767){
+		border-color: $c_green-light;
+	}
 	border-radius: 25px;
 	display: inline-block;
 	vertical-align: top;
@@ -19,7 +31,10 @@ h1{
 	text-transform: uppercase;
 	letter-spacing: 0.5px;
 	@include haf{
-		color: darken(#31CE03, 4.5%);
+		color: darken($c_green, 4.5%);
+		@include max(767){
+			color: darken($c_green-light, 4.5%);
+		}
 	}
 	&--bigger{
 		font-size: 16px;
@@ -29,12 +44,19 @@ h1{
 		min-width: 180px;
 	}
 	&--green{
-		background: #31CE03;
+		background: $c_green;
+		@include max(767){
+			background: $c_green-light;
+		}
 		color: #FFF;
 		@include haf{
 			color: #FFF;
-			background: darken(#31CE03, 4.5%);
-			border-color: darken(#31CE03, 4.5%);
+			background: darken($c_green, 4.5%);
+			border-color: darken($c_green, 4.5%);
+			@include max(767){
+				background: darken($c_green-light, 4.5%);
+				border-color: darken($c_green-light, 4.5%);
+			}
 		}
 	}
 	&--white{
@@ -52,6 +74,14 @@ h1{
 	height: 432px;
 	overflow: hidden;
 	display: flex;
+	@include max(767){
+		height: auto;
+		padding-top: 18px;
+		padding-bottom: 29px;
+		h1{
+			margin-top: 10px;
+		}
+	}
 	&__container{
 		display: flex;
 	}
@@ -62,18 +92,52 @@ h1{
 		justify-content: space-between;
 		align-items: center;
 		width: 100%;
+		@include max(767){
+			justify-content: center;
+			text-align: center;
+		}
 	}
 	p{
 		font-size: 22px;
 		line-height: 37px;
 		margin-bottom: 4px;
+		@include max(767){
+			font-size: 16px;
+			line-height: 22px;
+		}
 	}
 	&__text{
 		margin-bottom: 25px;
+		@include max(767){
+			margin-bottom: 15px;
+		}
 	}
 	&__buttons{
 		a {
 			margin-right: 5px;
+			@include max(767){
+				width: 250px;
+				display: block;
+				margin-right: auto;
+				margin-left: auto;
+				& + a{
+					margin-top: 15px;
+				}
+			}
+		}
+	}
+	&__box{
+		@include max(1199){
+			width: 480px;
+			br{
+				display: none;
+			}
+		}
+		@include max(899){
+			width: 400px;
+		}
+		@include max(767){
+			width: 100%;
 		}
 	}
 }
@@ -82,6 +146,16 @@ h1{
 	position: absolute;
 	right: -36px;
 	bottom: 0;
+	@include max(1199){
+		width: 381px;
+	}
+	@include max(899){
+		width: 320px;
+		right: -15px;
+	}
+	@include max(767){
+		display: none;
+	}
 }
 .balls{
 	position: absolute;
@@ -90,6 +164,9 @@ h1{
 	width: 100%;
 	height: 100%;
 	z-index: 10;
+	@include max(767){
+		display: none;
+	}
 }
 .ball{
 	position: absolute;
@@ -110,24 +187,72 @@ h1{
 	text-align: center;
 	color: #201C38;
 	padding-top: 78px;
+	@include max(767){
+		background: #F4F8FD;
+		padding-top: 21px;
+		padding-bottom: 30px;
+		h2{
+			margin-bottom: 5px;
+		}
+	}
 }
 h2{
 	font-size: 35px;
 	font-weight: 500;
 	line-height: 57px;
+	@include max(767){
+		font-size: 18px;
+		font-weight: 600;
+		line-height: 29px;
+	}
+}
+h3{
+	font-size: 35px;
+	font-weight: 500;
+	line-height: 57px;
+	@include max(767){
+		font-size: 16px;
+		font-weight: 600;
+		line-height: 16px;
+	}
 }
 .subcptn{
 	font-size: 18px;
 	line-height: 24px;
 	margin-bottom: 24px;
+	@include max(767){
+		font-size: 16px;
+		line-height: 22px;
+		margin-bottom: 12px;
+		letter-spacing: 0.75px;
+	}
 }
 .tabs-wr{
 	margin-bottom: 32px;
+	@include max(767){
+		margin-bottom: 21px;
+	}
 	.nav-tabs{
 		display: flex;
 		justify-content: center;
 		border: none;
 		margin-bottom: 6px;
+		.nav-item{
+			@include max(767){
+				&:nth-child(1){
+					text-align: left;
+					.nav-link{
+						padding-left: 0;
+					}
+				}
+				&:nth-child(3){
+					text-align: right;
+					.nav-link{
+						padding-right: 0;
+					}
+				}
+			}
+		}
 	}
 	.nav-link{
 		color: #97A5B8;
@@ -137,9 +262,17 @@ h2{
 		border: none !important;
 		&.active{
 			color: #201C38;
+			background: none;
 		}
 		@include haf{
 			color: #201C38;
+		}
+		@include max(767){
+			font-size: 12px;
+			line-height: 19px;
+			padding-bottom: 11px;
+			padding-left: 5px;
+			padding-right: 5px;
 		}
 	}
 	.nav-item{
@@ -148,10 +281,19 @@ h2{
 }
 .what-tabs{
 	margin-bottom: 78px;
+	@include max(767){
+		margin-bottom: 0;
+	}
 }
-hr{
+
+.hr{
 	margin: 0;
-	background-color: #D7E7FF;
+	border-color: #D7E7FF;
+}
+.hr-container{
+	@include max(767){
+		background: #F4F8FD;
+	}
 }
 .mb-20{
 	margin-bottom: 20px;
@@ -169,20 +311,40 @@ hr{
 	border-radius: 2px;
 	background-color: #201C38;
 	transition: .3s;
+	margin: 0;
 	&.num--1{
 		margin-left: 0;
 	}
 	&.num--2{
-		margin-left: 33%;
+		margin-left: 33.33%;
 	}
 	&.num--3{
-		margin-left: 66%;
+		margin-left: 66.66%;
 	}
 }
 .total{
 	display: flex;
 	justify-content: space-between;
+	flex-wrap: wrap;
 	margin-bottom: 31px;
+	@include max(1199){
+		justify-content: center;
+		&__item{
+			margin: 15px;
+		}
+	}
+	@include max(767){
+		justify-content: space-between;
+		margin-bottom: 10px;
+		&__item{
+			margin: 0 0 10px;
+			flex-basis: calc(50% - 5px);
+			&--first{
+				flex-basis: 100%;
+				flex-grow: 2;
+			}
+		}
+	}
 	&__box{
 		height: 116px;
 		width: 213px;
@@ -213,6 +375,24 @@ hr{
 			.total__percent{
 				border-bottom: solid 2px #fff;
 				padding-bottom: 11.5px;
+				@include max(767){
+					padding-bottom: 0;
+				}
+			}
+		}
+		@include max(767){
+			width: auto;
+			height: auto;
+			border-radius: 5px;
+			padding-top: 18px;
+			padding-bottom: 20px;
+			&:before{
+				background: #F6BB57;
+				width: 100%;
+				height: 100%;
+				top: 0;
+				left: 0;
+				border-radius: 5px;
 			}
 		}
 	}
@@ -222,48 +402,105 @@ hr{
 		font-weight: 500;
 		line-height: 18px;
 		margin-bottom: 11px;
+		@include max(767){
+			font-size: 14px;
+			line-height: 14px;
+			br{
+				display: none;
+			}
+			margin-bottom: 3px;
+		}
 	}
 	&__percent{
 		color: #FFFFFF;
 		font-size: 35px;
 		font-weight: 600;
 		line-height: 18px;
+		@include max(767){
+			font-size: 22px;
+			line-height: 24px;
+		}
+	}
+}
+.rev{
+	@include max(767){
+		border-radius: 5px;
+		background-color: #FFFFFF;
+		box-shadow: 0 10px 15px 0 #E2EEFF;
+		padding: 20px 15px 30px;
 	}
 }
 .rev-text{
 	font-size: 22px;
 	line-height: 37px;
 	margin-bottom: 26px;
+	@include min(576){
+		br{
+			display: none;
+		}
+	}
+	@include max(767){
+		font-size: 14px;
+		line-height: 22px;
+		margin-bottom: 17px;
+	}
 }
-h4{
+h5{
 	font-size: 28px;
 	font-weight: 600;
 	line-height: 46px;
 	text-transform: uppercase;
+	@include max(767){
+		font-size: 16px;
+		line-height: 22px;
+		text-transform: none;
+	}
 }
-h5{
+h6{
 	font-size: 22px;
 	font-weight: 500;
 	line-height: 37px;
+	@include max(767){
+		font-size: 16px;
+		line-height: 18px;
+		margin-bottom: 9px;
+	}
 }
 .what-box{
-	background: #E6F2FF url($i + 'bg_jinni_banner.png') no-repeat center/cover;
+	background: #E8F2FE url($i + 'bg_jinni_banner.png') no-repeat center/cover;
 	padding-top: 57px;
 	padding-bottom: 48px;
+	padding-left: 17px;
+	padding-right: 17px;
 	border-radius: 5px;
 	box-shadow: 0 10px 30px 0 rgba(212,219,245,0.4);
 	p{
 		font-size: 18px;
 		line-height: 29px;
+		@include max(767){
+			font-size: 14px;
+			line-height: 22px;
+			letter-spacing: 0.5px;
+		}
 	}
 	&__text{
 		margin-bottom: 20px;
+	}
+	@include max(767){
+		padding-bottom: 30px;
+		padding-top: 32px;
+		h5{
+			margin-bottom: 16px;
+		}
 	}
 }
 .your{
 	text-align: center;
 	padding-top: 78px;
 	padding-bottom: 58px;
+	@include max(767){
+		padding-bottom: 3px;
+	}
 	&__img{
 		width: 102px;
 		margin-bottom: 19px;
@@ -271,6 +508,9 @@ h5{
 	&__col{
 		padding-left: 10px;
 		padding-right: 10px;
+		@include max(767){
+			margin-bottom: 30px;
+		}
 	}
 	&__col-inner{
 		display: flex;
@@ -281,12 +521,31 @@ h5{
 		font-size: 16px;
 		line-height: 26px;
 		width: 100%;
+		@include max(767){
+			font-size: 14px;
+			line-height: 22px;
+			letter-spacing: 0.5px;
+		}
 	}
 	h5{
 		margin-bottom: 12px;
 	}
 	&__list{
 		padding-top: 18px;
+	}
+	@include max(767){
+		background: #F4F8FD;
+		padding-top: 33px;
+		h3{
+			margin-bottom: 4px;
+		}
+	}
+}
+.no-br-md{
+	br{
+		@include min(768){
+			display: none;
+		}
 	}
 }
 .chance{
@@ -295,6 +554,21 @@ h5{
 	padding-bottom: 80px;
 	h2{
 		margin-bottom: 25px;
+	}
+	@include max(767){
+		background: #4585FA;
+		color: #FFF;
+		padding-top: 27px;
+		padding-bottom: 26px;
+		h3{
+			line-height: 26px;
+			margin-bottom: 19px;
+		}
+		&__btn-wr{
+			a{
+				width: 220px;
+			}
+		}
 	}
 }
 .join{
@@ -305,6 +579,13 @@ h5{
 	h2{
 		margin-bottom: 14px;
 	}
+	@include max(767){
+		padding-bottom: 40px;
+		padding-top: 30px;
+		&__heading{
+			display: none;
+		}
+	}
 }
 .color-green{
 	color: #31CE03;
@@ -314,15 +595,39 @@ h5{
 }
 .join-form-wr{
 	width: 650px;
+	max-width: 100%;
 	margin: 44px auto 0;
 	border-radius: 5px;
 	background-color: #FFFFFF;
 	box-shadow: 0 5px 15px 0 #E2EEFF;
 	padding: 40px 98px 40px 65px;
+	@include max(767){
+		padding: 25px 15px 30px;
+		margin-top: 0;
+		box-shadow: 0 10px 15px 0 #DEEAFD;
+	}
+	&__heading{
+		font-size: 18px;
+		line-height: 26px;
+		letter-spacing: 0.5px;
+		.hr{
+			margin-top: 17px;
+			margin-bottom: 20px;
+		}
+		span{
+			margin-bottom: 20px;
+			font-weight: 600;
+		}
+	}
 }
 .join-form{
 	&__btn-row{
-		text-align: right;
+		@include min(768){
+			text-align: right;
+		}
+		@include max(767){
+			padding-top: 4px;
+		}
 	}
 	&__input-wr{
 		position: relative;
@@ -336,21 +641,39 @@ h5{
 		box-shadow: 0 2px 10px 0 rgba(127,177,223,0.1);
 		display: flex;
 		align-items: center;
+		@include max(767){
+			padding-left: 42px;
+			&--phone{
+				padding-left: 37px;
+			}
+		}
 		.icon{
 			position: absolute;
 			top: 50%;
 			transform: translateY(-50%);
 			&--profile{
 				left: 21px;
+				@include max(767){
+					left: 14px;
+				}
 			}
 			&--envelope{
 				left: 19px;
+				@include max(767){
+					left: 12px;
+				}
 			}
 			&--phone{
 				left: 20px;
+				@include max(767){
+					left: 11px;
+				}
 			}
 			&--bubble{
 				left: 17px;
+				@include max(767){
+					left: 10px;
+				}
 			}
 		}
 	}
@@ -365,11 +688,18 @@ h5{
 		padding-top: 12px;
 		box-shadow: 0 2px 10px 0 rgba(127,177,223,0.1);
 		padding-left: 51px;
+		@include max(767){
+			padding-left: 42px;
+			padding-top: 15px;
+		}
 		.icon{
 			position: absolute;
 			top: 16px;
 			&--bubble{
 				left: 17px;
+				@include max(767){
+					left: 10px;
+				}
 			}
 		}
 	}
@@ -386,6 +716,10 @@ h5{
 		@include placeholder{
 			color: #97A5B8;
 		}
+		@include max(767){
+			font-size: 12px;
+			line-height: 19px;
+		}
 	}
 	&__textarea{
 		display: block;
@@ -399,6 +733,10 @@ h5{
 		padding: 0 17px 0 0;
 		@include placeholder{
 			color: #97A5B8;
+		}
+		@include max(767){
+			font-size: 12px;
+			line-height: 19px;
 		}
 	}
 	&__group{
@@ -441,6 +779,11 @@ h5{
 	width: 64px;
 	padding-right: 13px;
 	margin-right: 22px;
+	@include max(767){
+		margin-right: 11px;
+		width: 64px;
+		padding-right: 17px;
+	}
 }
 .bootstrap-select.join-form-select{
 	color: #201C38;
@@ -472,6 +815,11 @@ h5{
 		left: -51px !important;
 		border-top-right-radius: 0;
 		border: 1px solid #D4DFEC;
+		@include max(767){
+			width: 107px;
+			left: -43px !important;
+			top: 15px !important;
+		}
 	}
 	.btn{
 		padding: 0;
@@ -489,6 +837,10 @@ h5{
 		}
 		&:after{
 			display: none;
+		}
+		@include max(767){
+			font-size: 12px;
+			line-height: 10px;
 		}
 	}
 	.dropdown-item{
@@ -543,6 +895,10 @@ h5{
 			background: url($i + "down-arrow.svg") no-repeat center/contain;
 			opacity: 0.6;
 		}
+		@include max(767){
+			height: 8.84px;
+			width: 15.7px;
+		}
 	}
 }
 .flag{
@@ -553,6 +909,9 @@ h5{
 	display: inline-block;
 	vertical-align: top;
 	margin-right: 10px;
+	@include max(767){
+		margin-right: 5px;
+	}
 	&:before{
 		content: "";
 		height: 16px;
@@ -593,6 +952,10 @@ h5{
 	font-weight: 600;
 	line-height: 15px;
 	outline: none !important;
+	
+	@include max(767){
+		width: 262px !important;
+	}
 	& + .border{
 		margin-left: 13px;
 		margin-right: 22px;
@@ -632,6 +995,11 @@ h5{
 		}
 		&:after{
 			display: none;
+		}
+		@include max(767){
+			padding-left: 12px;
+			font-size: 12px;
+			line-height: 16px;
 		}
 	}
 	.dropdown-item{
@@ -723,6 +1091,14 @@ h5{
 .brands{
 	padding-top: 60px;
 	padding-bottom: 60px;
+	@include max(767){
+		padding-top: 2px;
+		padding-bottom: 20px;
+	}
+	.hr{
+		margin-bottom: 20px;
+		opacity: 0.5;
+	}
 }
 .brands-list{
 	display: flex;
@@ -731,6 +1107,14 @@ h5{
 	&__item{
 		margin-left: 30px;
 		margin-right: 30px;
+		@include max(767){
+			margin-right: 15px;
+			margin-left: 15px;
+		}
+		@include max(575){
+			margin-right: 5px;
+			margin-left: 5px;
+		}
 	}
 	&__img{
 		&--1{
@@ -760,59 +1144,136 @@ h5{
 		padding-left: 15px;
 		padding-right: 15px;
 	}
-	h3{
+	h4{
 		margin-bottom: 35px;
+		@include max(767){
+			margin-bottom: 23px;
+		}
+	}
+	@include max(767){
+		padding-top: 25px;
+		padding-bottom: 25px;
 	}
 }
-h3{
+h4{
 	font-size: 28px;
 	font-weight: 500;
 	line-height: 28px;
+	@include max(767){
+		font-size: 16px;
+		line-height: 18px;
+	}
 }
 .our-list{
 	display: flex;
 	justify-content: center;
 	flex-wrap: wrap;
+	@include max(575){
+		// display: block;
+		// font-size: 0;
+	}
 	&__item{
 		margin: 20px 16px;
+		@include max(575){
+			// display: inline-block;
+			// vertical-align: top;
+			// width: calc(25% - 10px);
+			flex: 0 0 calc(25% - 10px);
+			margin: 5px;
+			&:nth-child(4n + 1){
+				margin-left: 0;
+			}
+			&:nth-child(4n){
+				margin-right: 0;
+			}
+		}
 	}
 	&__box{
 		height: 100px;
 		width: 162.5px;
+		max-width: 100%;
+		max-height: 100%;
 		border-radius: 2px;
 		background-color: #FFFFFF;
 		box-shadow: 0 10px 15px 0 #D6E5F7;
 		display: flex;
 		align-items: center;
 		justify-content: center;
+		margin: 0 auto;
+		@include max(575){
+			height: 39.88px;
+			width: 64.81px;
+		}
 	}
 	&__img{
+		&--1{
+			@include max(575){
+				width: 37px;
+			}
+		}
+		&--2{
+			@include max(575){
+				width: 25px;
+			}
+		}
 		&--3{
 			width: 60px;
+			@include max(575){
+				width: 25px;
+			}
+		}
+		&--4{
+			@include max(575){
+				width: 35px;
+			}
 		}
 		&--5{
 			width: 101px;
+			@include max(575){
+				width: 38px;
+			}
 		}
 		&--6{
 			width: 92px;
+			@include max(575){
+				width: 36px;
+			}
 		}
 		&--7{
 			width: 105px;
+			@include max(575){
+				width: 36px;
+			}
 		}
 		&--8{
 			width: 90px;
+			@include max(575){
+				width: 36px;
+			}
 		}
 		&--9{
 			width: 98px;
+			@include max(575){
+				width: 36px;
+			}
 		}
 		&--10{
 			width: 90px;
+			@include max(575){
+				width: 38px;
+			}
 		}
 		&--11{
 			width: 115px;
+			@include max(575){
+				width: 38px;
+			}
 		}
 		&--12{
 			width: 125px;
+			@include max(575){
+				width: 48px;
+			}
 		}
 	}
 }
@@ -823,6 +1284,9 @@ h3{
 	line-height: 20px;
 	padding-top: 50px;
 	padding-bottom: 43px;
+	@include max(767){
+		padding-bottom: 17px;
+	}
 	p{
 		margin-bottom: 20px;
 	}

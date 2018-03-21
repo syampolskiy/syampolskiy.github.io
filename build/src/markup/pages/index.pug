@@ -40,7 +40,7 @@ block content
 				#rev.tab-pane.fade.show.active(role='tabpanel')
 					.rev
 						ul.total
-							li.total__item
+							li.total__item.total__item--first
 								.total__box.total__box--first
 									.total__cptn First 3 months<br>welcome bonus
 									.total__percent 50%
@@ -61,65 +61,75 @@ block content
 									.total__cptn NGR over €3500
 									.total__percent 45%
 						.rev-text
-							p Sign up to receive 50% Rev-share on your traffic
+							p Sign up to receive 50% Rev-share<br>on your traffic
 						.rev-btn-wr
 							a.simple-btn.simple-btn--green.simple-btn--bigger(href="#") start now
 				#cpa.tab-pane.fade(role='tabpanel')
 					.what-box
-						h4 Custom CPA deals are possible.
+						h5
+							| Custom CPA deals
+							br.d-md-none
+							| are possible.
 						.what-box__text
 							p We welcome every deal as long as both parties are fully satisfied.<br>Contact us today and our affiliate manager will gladly discuss your CPA deal with you.
 						p
 							a.simple-btn.simple-btn--green.simple-btn--bigger(href="#") let's talk
 				#hybrid.tab-pane.fade(role='tabpanel')
 					.what-box
-						h4 Custom hybrid deals are possible.
+						h5 Custom hybrid deals are possible.
 						.what-box__text
 							p We welcome every deal as long as both parties are fully satisfied.<br>Contact us today and our affiliate manager will gladly discuss your hybrid deal with you.
 						p
 							a.simple-btn.simple-btn--green.simple-btn--bigger(href="#") let's talk
-	.container
-		hr
+	.container.hr-container
+		hr.hr
 	.your
 		.container
-			h2 Your conversion tools
-			.subcptn Constantly optimizing conversion on every step:
+			h3 Your conversion tools
+			.subcptn.no-br-md Constantly optimizing<br>conversion on every step:
 			.row.your__list
 				.col-md-3.your__col
 					.your__col-inner
 						img.your__img(src=i + "your-1.svg", alt="")
-						h5 LPs & Ads
+						h6 LPs & Ads
 						p We are continually creating new marketing materials for our affiliates so you can improve your conversion rates and grow your business.
 				.col-md-3.your__col
 					.your__col-inner
 						img.your__img(src=i + "your-2.svg", alt="")
-						h5 Emails
+						h6 Emails
 						p We make sure your  traffic is always aware of our exclusive offers with personalized and automated email cycles.
 				.col-md-3.your__col
 					.your__col-inner
 						img.your__img(src=i + "your-3.svg", alt="")
-						h5 Website
+						h6 Website
 						p We constantly monitor and optimize our website to deliver<br>a User Experience designed to up-sell your traffic.
 				.col-md-3.your__col
 					.your__col-inner
 						img.your__img(src=i + "your-4.svg", alt="")
-						h5 Agents
+						h6 Agents
 						p Our dedicated Customer Support agents are here to help you reach even the most<br>"Hard-to-Get" clients.
-	.container
-		hr
+	.container.hr-container.d-none.d-md-block
+		hr.hr
 	.chance
 		.container
-			h2 This is your chance to maximize your epic<br>50% rev-share on your traffic
-			.start-btn-wr
+			h3 This is your chance to<br class="d-md-none">maximize your epic<br>50% rev-share on your traffic
+			.chance__btn-wr
 				a.simple-btn.simple-btn--green.simple-btn--bigger(href="#") start now
 	.join
 		.container
-			h2 Want to join our affiliate program?
-			.subcptn
-				| Have a question in mind?
-				span.color-green.fw-500 Let’s talk
-				| :
+			.join__heading
+				h2 Want to join our affiliate program?
+				.subcptn
+					| Have a question in mind?
+					span.color-green.fw-500 Let’s talk
+					| :
 			.join-form-wr
+				.join-form-wr__heading.d-md-none
+					| Have a question in mind?
+					br
+					span.color-green Let’s talk
+					| :
+					hr.hr
 				form(action="").join-form
 					.join-form__group
 						.join-form__input-wr
@@ -141,10 +151,10 @@ block content
 						select.selectpicker.flag-select
 							option(data-content="<div class='flag flag--israel'></div> +972") +972
 							option(data-content="<div class='flag flag--uk'></div> +44") +44
-						.join-form__input-wr
+						.join-form__input-wr.join-form__input-wr--phone
 							.icon.icon--phone
 							input.join-form__input(type="tel" placeholder="Phone Number")
-					hr.mb-20
+					hr.hr.mb-20
 					.join-form__group
 						.join-form__input-wr
 							.icon.icon--bubble
@@ -157,6 +167,7 @@ block content
 						a.simple-btn.simple-btn--green.simple-btn--bigger(href="#") Send
 	.brands
 		.container
+			hr.hr.d-md-none
 			ul.brands-list
 				li.brands-list__item
 					img.brands-list__img.brands-list__img--1(src=i + "18+.png", alt="")
@@ -170,7 +181,7 @@ block content
 					img.brands-list__img.brands-list__img--5(src=i + "secure.png", alt="")
 	.our
 		.container.our__container
-			h3 Our payment methods offer a world of choice
+			h4 Our payment methods offer a world of choice
 			ul.our-list
 				- var our = ["our-01.svg","our-02.svg","our-03.png","our-04.svg","our-05.png","our-06.png","our-07.png","our-08.png","our-09.png","our-10.png","our-11.png","our-12.png"];
 				each item, index in our
@@ -180,6 +191,6 @@ block content
 	.bottom
 		.container
 			.bottom__inner
-				p Jinni Lotto is operated by Jinni Tech Limited of First Floor, Jubilee Building, Victoria Street, Douglas, Isle of Man, IM1 2SH<br>Jinni Tech Ltd is licensed and regulated by the Isle of Man Gambling Supervision Commission under a licence issued under the Online Gambling Regulation Act 2001<br>on [date and year]. Please note, this license is not applicable to players residing in the UK.
+				p Jinni Lotto is operated by Jinni Tech Limited of P.O Box 227, Clinch’s House, Lord Street, Douglas, Isle of Man, IM99 1RZ
 				p Jinni Tech Ltd does not operate a lottery. Members place bets on the outcome of national lotteries. Official lottery tickets and insurance are purchased based on the bets placed so that all winnings are equal to the cash option of national lottery winnings.
 				p Copyright © 2017, Jinni Tech Ltd. All rights reserved. The National Lottery and Lotto are trademarks of the National Lottery Commission. EuroMillions is the trademark<br>of Services aux Loteries en Europe. Jinni Tech Limited is not connected to or affiliated with any body or organisation related to the National Lottery or any other lottery.
