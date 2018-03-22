@@ -12,6 +12,9 @@ $(function() {
 
     // browser detection
     $('body').addClass(getBrowser().name.toLowerCase());
+    if (isiOS()){
+        $('body').addClass('ios');
+    }
 
     function getBrowser(){
         var ua=navigator.userAgent,tem,M=ua.match(/(opera|chrome|safari|firefox|msie|trident(?=\/))\/?\s*(\d+)/i) || []; 
@@ -30,6 +33,10 @@ $(function() {
           name: M[0],
           version: M[1]
         };
+    }
+
+    function isiOS(){
+        return /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
     }
     // browser detection --/
 });

@@ -744,6 +744,22 @@ h6{
 		display: flex;
 	}
 }
+
+.ios {
+	.join-form__input{
+		@include placeholder{
+			line-height: 22px;
+			@include max(767){
+				line-height: 22px;
+			}
+		}
+	}
+	.bootstrap-select.flag-select .btn{
+		padding-top: 0;
+	}
+}
+
+
 .icon{
 	display: inline-block;
 	vertical-align: top;
@@ -973,11 +989,11 @@ h6{
 		padding-bottom: 3px;
 		padding-top: 3px;
 		width: 127px;
-		top: -1px !important;
+		top: -2px !important;
 		// border-top-left-radius: 0;
 		// border-top-right-radius: 0;
 		border: 1px solid #D4DFEC;
-		border-top: none;
+		// border-top: none;
 	}
 	.btn{
 		padding: 3px 11px 0 19px;

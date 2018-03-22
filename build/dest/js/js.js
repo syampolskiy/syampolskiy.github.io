@@ -12,6 +12,9 @@ $(function() {
 
 	// browser detection
 	$('body').addClass(getBrowser().name.toLowerCase());
+	if (isiOS()) {
+		$('body').addClass('ios');
+	}
 
 	function getBrowser() {
 		var ua = navigator.userAgent,
@@ -41,6 +44,10 @@ $(function() {
 			name: M[0],
 			version: M[1]
 		};
+	}
+
+	function isiOS() {
+		return /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
 	}
 	// browser detection --/
 });
