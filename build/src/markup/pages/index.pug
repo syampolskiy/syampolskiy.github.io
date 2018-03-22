@@ -188,9 +188,27 @@ block content
 					li.our-list__item
 						.our-list__box
 							img.our-list__img(class="our-list__img--" + (index+1), src=i + item, alt="")
-	.bottom
+	footer.footer
 		.container
-			.bottom__inner
-				p Jinni Lotto is operated by Jinni Tech Limited of P.O Box 227, Clinch’s House, Lord Street, Douglas, Isle of Man, IM99 1RZ
-				p Jinni Tech Ltd does not operate a lottery. Members place bets on the outcome of national lotteries. Official lottery tickets and insurance are purchased based on the bets placed so that all winnings are equal to the cash option of national lottery winnings.
-				p Copyright © 2017, Jinni Tech Ltd. All rights reserved. The National Lottery and Lotto are trademarks of the National Lottery Commission. EuroMillions is the trademark<br>of Services aux Loteries en Europe. Jinni Tech Limited is not connected to or affiliated with any body or organisation related to the National Lottery or any other lottery.
+			.footer__inner
+				.footer__heading
+					a.footer__logo(href="/")
+						img(src=i + "logo.svg", alt="")
+				.footer__heading-mobile
+					.footer__heading-side
+						.footer__about-jinni About Jinnilotto
+						p
+							a.footer__link(href="#") Terms & Conditions
+					a.footer__logo-mobile(href="/")
+						img(src=i + "logo.svg", alt="")
+				.footer__content
+					.footer__terms
+						a.footer__link(href="#") Terms & Conditions
+					p.
+						Jinni Lotto is operated by Jinni Tech Ltd of<br>First Floor, Jubilee Building, Victoria Street, Douglas,<br> Isle of Man, IM1 2SH
+					P.
+						Jinni Tech Ltd is licensed and regulated by the Isle<br>of Man Gambling Supervision Commission under<br>a licence issued under the Online Gambling Regulation Act 2001 on [ date and year]. Please note, this license is not applicable to players residing in the UK.
+					p.
+						Jinni Tech Ltd does not operate a lottery. Members place bets on the outcome of national lotteries. Official lottery tickets and insurance are purchased based on the bets placed so that all winnings are equal to the cash option of national lottery winnings.
+					p.
+						Copyright © 2017, Jinni Tech Ltd All rights reserved<br>The National Lottery and Lotto are trademarks of the National Lottery Commission. EuroMillions is the trademark of Services aux Loteries en Europe.<br>Jinni Tech Ltd is not connected to or affiliated with<br>any body or organisation related to the National<br>Lottery or any other lottery.

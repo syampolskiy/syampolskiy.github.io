@@ -1809,24 +1809,125 @@ h4 {
 	}
 }
 
-.bottom {
+.footer {
 	text-align: center;
 	color: #201b37;
 	font-size: 12px;
 	line-height: 20px;
 	padding-top: 50px;
-	padding-bottom: 43px;
+	padding-bottom: 106px;
+	background: #fff linear-gradient(180deg, #fff 0%, #ecf3ff 100%);
 }
 @media (max-width: 767px) {
-	.bottom {
+	.footer {
 		padding-bottom: 17px;
+		padding-top: 27px;
 	}
 }
-.bottom p {
-	margin-bottom: 20px;
+.footer p {
+	margin-bottom: 23px;
 }
-.bottom__inner {
+.footer__inner {
 	width: 1040px;
 	max-width: 100%;
 	margin: 0 auto;
+}
+.footer__heading {
+	text-align: right;
+	border-bottom: solid 1px #d7e7ff;
+	padding-bottom: 52px;
+	margin-bottom: 22px;
+}
+@media (max-width: 767px) {
+	.footer__heading {
+		display: none;
+	}
+}
+.footer__heading-mobile {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding-bottom: 23px;
+	border-bottom: solid 1px #d7e7ff;
+	width: calc(100% - 30px);
+	margin-left: auto;
+	margin-right: auto;
+}
+.footer__heading-mobile p {
+	margin-bottom: 0;
+}
+@media (min-width: 768px) {
+	.footer__heading-mobile {
+		display: none;
+	}
+}
+@media (max-width: 767px) {
+	.footer__heading-mobile {
+		margin-bottom: 19px;
+	}
+}
+@media (max-width: 767px) {
+	.footer__heading-side {
+		text-align: left;
+	}
+}
+.footer__about-jinni {
+	color: #201b37;
+	font-size: 14px;
+	font-weight: 500;
+	line-height: 23px;
+	text-transform: uppercase;
+	letter-spacing: .5px;
+	margin-bottom: 13px;
+}
+.footer__logo img {
+	width: 222px;
+	height: 111px;
+}
+.footer__logo-mobile img {
+	width: 99px;
+	height: 51px;
+}
+.footer__link {
+	color: #97a5b8;
+	font-size: 14px;
+	font-weight: 500;
+	line-height: 28px;
+}
+.footer__link:hover,
+.footer__link:active,
+.footer__link:focus {
+	color: #000;
+}
+@media (max-width: 767px) {
+	.footer__link {
+		font-size: 12px;
+		line-height: 28px;
+	}
+}
+.footer__terms {
+	margin-bottom: 13px;
+}
+@media (max-width: 767px) {
+	.footer__terms {
+		display: none;
+	}
+}
+.footer__content {
+	color: #201b37;
+	font-size: 12px;
+	font-weight: 400;
+	line-height: 20px;
+	letter-spacing: .5px;
+}
+@media (max-width: 767px) {
+	.footer__content {
+		font-size: 10px;
+		line-height: 16px;
+	}
+}
+@media (min-width: 576px) {
+	.footer__content br {
+		display: none;
+	}
 }
