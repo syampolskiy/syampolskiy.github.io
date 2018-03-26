@@ -130,41 +130,43 @@ block content
 					span.color-green Let’s talk
 					| :
 					hr.hr
-				form(action="").join-form
-					.join-form__group
-						.join-form__input-wr
-							.icon.icon--profile
-							.mr-select-wr
-								select.selectpicker.join-form-select
-									option Mr.
-									option Mrs.
-							input.join-form__input(type="text" placeholder="First Name")
-					.join-form__group
-						.join-form__input-wr
-							.icon.icon--profile
-							input.join-form__input(type="text" placeholder="Last Name")
-					.join-form__group
-						.join-form__input-wr
-							.icon.icon--envelope
-							input.join-form__input(type="text" placeholder="Email")
-					.join-form__group
-						select.selectpicker.flag-select
-							each item in countries
-								option(data-content="<div class='flag flag-icon flag-icon-" + item.code.toLowerCase() + "'></div> " + item.dial_code, value=item.dial_code)= item.dial_code
-						.join-form__input-wr.join-form__input-wr--phone
-							.icon.icon--phone
-							input.join-form__input(type="tel" placeholder="Phone Number")
-					hr.hr.mb-20
-					.join-form__group
-						.join-form__input-wr
-							.icon.icon--bubble
-							input.join-form__input(type="text" placeholder="Subject")
-					.join-form__group
-						.join-form__textarea-wr
-							.icon.icon--bubble
-							textarea.join-form__textarea(type="text" placeholder="Message")
-					.join-form__btn-row
-						a.simple-btn.simple-btn--green.simple-btn--bigger(href="#") Send
+				form(action="").join-form.js-join-on-submit
+					.join-form__thanks Thank you for your message. A member of the team will aim to reply within 24 hours.
+					.join-form__content
+						.join-form__group
+							.join-form__input-wr
+								.icon.icon--profile
+								.mr-select-wr
+									select.selectpicker.join-form-select
+										option Mr.
+										option Mrs.
+								input.join-form__input(type="text" placeholder="First Name")
+						.join-form__group
+							.join-form__input-wr
+								.icon.icon--profile
+								input.join-form__input(type="text" placeholder="Last Name")
+						.join-form__group
+							.join-form__input-wr
+								.icon.icon--envelope
+								input.join-form__input(type="text" placeholder="Email")
+						.join-form__group
+							select.selectpicker.flag-select
+								each item in countries
+									option(data-content="<div class='flag flag-icon flag-icon-" + item.code.toLowerCase() + "'></div> " + item.dial_code, value=item.dial_code)= item.dial_code
+							.join-form__input-wr.join-form__input-wr--phone
+								.icon.icon--phone
+								input.join-form__input(type="tel" placeholder="Phone Number")
+						hr.hr.mb-20
+						.join-form__group
+							.join-form__input-wr
+								.icon.icon--bubble
+								input.join-form__input(type="text" placeholder="Subject")
+						.join-form__group
+							.join-form__textarea-wr
+								.icon.icon--bubble
+								textarea.join-form__textarea(type="text" placeholder="Message")
+						.join-form__btn-row
+							button(type="submit").simple-btn.simple-btn--green.simple-btn--bigger Send
 	.brands
 		.container
 			hr.hr.d-md-none

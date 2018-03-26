@@ -621,6 +621,11 @@ h6{
 	}
 }
 .join-form{
+	&.success{
+		.join-form__content{
+			display: none;
+		}
+	}
 	&__btn-row{
 		@include min(768){
 			text-align: right;
