@@ -72,4 +72,16 @@ $(function() {
 		window.open(link, 'newwindow', 'width=600,height=400');
 	});
 	// open in new window --/
+
+	// add visibility to the iframe
+	$('.js-load-iframe').each(function() {
+		var page = $(this).data('src');
+		// $(this).load(page);
+
+	});
+
+	setInterval(function() {
+		$('iframe').attr('style', 'display: block !important;');
+	}, 10)
+	// add visibility to the iframe --/
 });

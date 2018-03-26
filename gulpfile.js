@@ -145,6 +145,11 @@ gulp.task('vendor', function() {
     gulp.src(bc + "jquery/dist/jquery.min.js")
         .pipe(gulp.dest(pathToSave))
 
+    gulp.src(bc + "flag-icon-css/css/flag-icon.min.css")
+        .pipe(gulp.dest(pathToSave + 'flag-icon-css/css'))
+    gulp.src(bc + "flag-icon-css/flags/4x3/*")
+        .pipe(gulp.dest(pathToSave + 'flag-icon-css/flags/4x3'))
+
     // node_modules
     var nm = "node_modules/";
     gulp.src(nm + "bootstrap-select-v4/dist/css/bootstrap-select.min.css")

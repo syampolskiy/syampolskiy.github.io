@@ -5,6 +5,7 @@
     "jquery": "^3.3.1",
     "bootstrap": "^4.0.0",
     "tether": "^1.4.3",
-    "popper.js": "^1.14.1"
+    "popper.js": "^1.14.1",
+    "flag-icon-css": "^3.1.0"
   }
 }

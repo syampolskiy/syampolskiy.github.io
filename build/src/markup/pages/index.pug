@@ -14,7 +14,7 @@ block content
 						p Jinni is expanding, that’s why we are offering<br>50% Rev-Share on your traffic right from the start.*
 					.simple__buttons
 						a.simple-btn.simple-btn--white.simple-btn--bigger.js-scroll-to(href="#commisions") commisions
-						a.simple-btn.simple-btn--green.simple-btn--bigger.js-open-in-new-window(href="http://affiliates.jinnilotto.com/signup.html") start now
+						a.simple-btn.simple-btn--green.simple-btn--bigger(href="http://affiliates.jinnilotto.com/signup.html" data-toggle='modal', data-target='#signupModal') start now
 				img.jinni-img(src=i + "jinni-bookkie.png", alt="")
 
 			.balls
@@ -63,7 +63,7 @@ block content
 						.rev-text
 							p Sign up to receive 50% Rev-share<br>on your traffic
 						.rev-btn-wr
-							a.simple-btn.simple-btn--green.simple-btn--bigger.js-open-in-new-window(href="http://affiliates.jinnilotto.com/signup.html") start now
+							a.simple-btn.simple-btn--green.simple-btn--bigger(href="http://affiliates.jinnilotto.com/signup.html" data-toggle='modal', data-target='#signupModal') start now
 				#cpa.tab-pane.fade(role='tabpanel')
 					.what-box
 						h5
@@ -114,7 +114,7 @@ block content
 		.container
 			h3 This is your chance to<br class="d-md-none">maximize your epic<br>50% rev-share on your traffic
 			.chance__btn-wr
-				a.simple-btn.simple-btn--green.simple-btn--bigger.js-open-in-new-window(href="http://affiliates.jinnilotto.com/signup.html") start now
+				a.simple-btn.simple-btn--green.simple-btn--bigger(href="http://affiliates.jinnilotto.com/signup.html" data-toggle='modal', data-target='#signupModal') start now
 	.join#contact-us
 		.container
 			.join__heading
@@ -149,8 +149,8 @@ block content
 							input.join-form__input(type="text" placeholder="Email")
 					.join-form__group
 						select.selectpicker.flag-select
-							option(data-content="<div class='flag flag--israel'></div> +972") +972
-							option(data-content="<div class='flag flag--uk'></div> +44") +44
+							each item in countries
+								option(data-content="<div class='flag flag-icon flag-icon-" + item.code.toLowerCase() + "'></div> " + item.dial_code, value=item.dial_code)= item.dial_code
 						.join-form__input-wr.join-form__input-wr--phone
 							.icon.icon--phone
 							input.join-form__input(type="tel" placeholder="Phone Number")
@@ -212,3 +212,27 @@ block content
 						Jinni Tech Ltd does not operate a lottery. Members place bets on the outcome of national lotteries. Official lottery tickets and insurance are purchased based on the bets placed so that all winnings are equal to the cash option of national lottery winnings.
 					p.
 						Copyright © 2017, Jinni Tech Ltd All rights reserved<br>The National Lottery and Lotto are trademarks of the National Lottery Commission. EuroMillions is the trademark of Services aux Loteries en Europe.<br>Jinni Tech Ltd is not connected to or affiliated with<br>any body or organisation related to the National<br>Lottery or any other lottery.
+
+	#signupModal.modal.fade(tabindex='-1', role='dialog')
+		.modal-dialog.modal-dialog-centered(role='document')
+			.modal-content
+				.modal-header
+					button.close(type='button', data-dismiss='modal')
+						span ×
+				.modal-body
+					//- .jinniIframe(data-src="http://affiliates.jinnilotto.com/signup.html").js-load-iframe
+					iframe(src="http://affiliates.jinnilotto.com/signup.html")
+				.modal-footer
+					button.btn.btn-secondary(type='button', data-dismiss='modal') Close
+					button.btn.btn-primary(type='button') Save changes
+	//- #loginModal.modal.fade(tabindex='-1', role='dialog')
+	//- 	.modal-dialog.modal-dialog-centered(role='document')
+	//- 		.modal-content
+	//- 			.modal-header
+	//- 				button.close(type='button', data-dismiss='modal')
+	//- 					span ×
+	//- 			.modal-body
+	//- 				.jinniIframe(data-src="https://affiliates.jinnilotto.com/affiliates/Account/Login").js-load-iframe
+	//- 			.modal-footer
+	//- 				button.btn.btn-secondary(type='button', data-dismiss='modal') Close
+	//- 				button.btn.btn-primary(type='button') Save changes
