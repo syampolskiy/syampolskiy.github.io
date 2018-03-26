@@ -1039,6 +1039,14 @@ h6 {
 	font-weight: 600;
 }
 
+.join-form__thanks {
+	display: none;
+}
+
+.join-form.success .join-form__thanks {
+	display: block;
+}
+
 .join-form.success .join-form__content {
 	display: none;
 }

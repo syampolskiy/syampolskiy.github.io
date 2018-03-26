@@ -621,7 +621,13 @@ h6{
 	}
 }
 .join-form{
+	&__thanks{
+		display: none;
+	}
 	&.success{
+		.join-form__thanks{
+			display: block;
+		}
 		.join-form__content{
 			display: none;
 		}
