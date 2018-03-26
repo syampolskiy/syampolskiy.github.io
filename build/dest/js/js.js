@@ -7,7 +7,7 @@ $(function() {
 			return (className.match(/(^|\s)num--\S+/g) || []).join(' ');
 		});
 		hr.addClass('num--' + number);
-	})
+	});
 	// Click tabs --/
 
 	// browser detection
@@ -27,7 +27,7 @@ $(function() {
 			};
 		}
 		if (M[1] === 'Chrome') {
-			tem = ua.match(/\bOPR\/(\d+)/)
+			tem = ua.match(/\bOPR\/(\d+)/);
 			if (tem != null) {
 				return {
 					name: 'Opera',
@@ -50,4 +50,26 @@ $(function() {
 		return /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
 	}
 	// browser detection --/
+
+	// smooth scrolling
+	$(".js-scroll-to").on('click', function(event) {
+		if (this.hash !== "") {
+			event.preventDefault();
+			var hash = this.hash;
+			$('html, body').animate({
+				scrollTop: $(hash).offset().top
+			}, 450, function() {
+				window.location.hash = hash;
+			});
+		}
+	});
+	// smooth scrolling --/
+
+	// open in new window
+	$('.js-open-in-new-window').click(function(e) {
+		e.preventDefault();
+		var link = $(this).attr('href');
+		window.open(link, 'newwindow', 'width=600,height=400');
+	});
+	// open in new window --/
 });
