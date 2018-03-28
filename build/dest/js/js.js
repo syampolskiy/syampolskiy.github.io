@@ -77,15 +77,23 @@ $(function() {
 	$('.js-join-on-submit').on('submit', function(e) {
 		e.preventDefault();
 
-		$.post("https://api.jinnilotto.com/affiliate/sendEmail/response.json", function(data) {
-			if (JSON.parse(data).success) {
+		var form = $(this);
+
+		$.ajax({
+			type: 'post',
+			url: 'https://api.jinnilotto.com/affiliate/sendEmail/response.json',
+			data: form.serialize(),
+			success: function(data) {
 				$('.js-join-on-submit').addClass('success');
 				$('html, body').animate({
 					scrollTop: $("#contact-us").offset().top
 				}, 500);
-			}
+			},
+			error: function(data) {
+				console.log('An error occurred.');
+				console.log(data);
+			},
 		});
-		// https://api.jinnilotto.com/affiliate/sendEmail/response.json
 	});
 	// submit join form --/
 });

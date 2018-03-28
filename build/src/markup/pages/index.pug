@@ -137,34 +137,34 @@ block content
 							.join-form__input-wr
 								.icon.icon--profile
 								.mr-select-wr
-									select.selectpicker.join-form-select
+									select(name="title").selectpicker.join-form-select
 										option Mr.
 										option Mrs.
-								input.join-form__input(type="text" placeholder="First Name")
+								input.join-form__input(type="text" placeholder="First Name" name="firstname")
 						.join-form__group
 							.join-form__input-wr
 								.icon.icon--profile
-								input.join-form__input(type="text" placeholder="Last Name")
+								input.join-form__input(type="text" placeholder="Last Name" name="lastname")
 						.join-form__group
 							.join-form__input-wr
 								.icon.icon--envelope
-								input.join-form__input(type="text" placeholder="Email")
+								input.join-form__input(type="text" placeholder="Email" name="email")
 						.join-form__group
-							select.selectpicker.flag-select
+							select(name="phonePrefix").selectpicker.flag-select
 								each item in countries
-									option(data-content="<div class='flag flag-icon flag-icon-" + item.code.toLowerCase() + "'></div> " + item.dial_code, value=item.dial_code)= item.dial_code
+									option(data-content="<div class='flag flag-icon flag-icon-" + item.code.toLowerCase() + "'></div> " + item.dial_code, value=item.dial_code.substr(1))= item.dial_code
 							.join-form__input-wr.join-form__input-wr--phone
 								.icon.icon--phone
-								input.join-form__input(type="tel" placeholder="Phone Number")
+								input.join-form__input(type="tel" placeholder="Phone Number" name="phoneNumber")
 						hr.hr.mb-20
 						.join-form__group
 							.join-form__input-wr
 								.icon.icon--bubble
-								input.join-form__input(type="text" placeholder="Subject")
+								input.join-form__input(type="text" placeholder="Subject" name="subject")
 						.join-form__group
 							.join-form__textarea-wr
 								.icon.icon--bubble
-								textarea.join-form__textarea(type="text" placeholder="Message")
+								textarea.join-form__textarea(type="text" placeholder="Message" name="message")
 						.join-form__btn-row
 							button(type="submit").simple-btn.simple-btn--green.simple-btn--bigger Send
 	.brands
@@ -172,15 +172,20 @@ block content
 			hr.hr.d-md-none
 			ul.brands-list
 				li.brands-list__item
-					img.brands-list__img.brands-list__img--1(src=i + "18+.png", alt="")
+					a.brands-list__link(href="https://jinnilotto.com/terms-conditions/")
+						img.brands-list__img.brands-list__img--1(src=i + "18+.png", alt="")
 				li.brands-list__item
-					img.brands-list__img.brands-list__img--2(src=i + "problem.svg", alt="")
+					a.brands-list__link(href="http://www.gamcare.org.uk/")
+						img.brands-list__img.brands-list__img--2(src=i + "problem.svg", alt="")
 				li.brands-list__item
-					img.brands-list__img.brands-list__img--3(src=i + "Coat_of_arms_of_the_Isle_of_Man.png", alt="")
+					a.brands-list__link(href="http://www.gov.im/gambling/licensees/")
+						img.brands-list__img.brands-list__img--3(src=i + "Coat_of_arms_of_the_Isle_of_Man.png", alt="")
 				li.brands-list__item
-					img.brands-list__img.brands-list__img--4(src=i + "ibas.png", alt="")
+					a.brands-list__link(href="http://www.ibas-uk.com/")
+						img.brands-list__img.brands-list__img--4(src=i + "ibas.png", alt="")
 				li.brands-list__item
-					img.brands-list__img.brands-list__img--5(src=i + "secure.png", alt="")
+					a.brands-list__link(href="https://www.comodo.com/")
+						img.brands-list__img.brands-list__img--5(src=i + "secure.png", alt="")
 	.our
 		.container.our__container
 			h4 Our payment methods offer a world of choice
@@ -200,33 +205,30 @@ block content
 					.footer__heading-side
 						.footer__about-jinni About Jinnilotto
 						p
-							a.footer__link(href="#") Terms & Conditions
+							a.footer__link(href="/terms-and-conditions.html" target="_blank") Terms & Conditions
 					a.footer__logo-mobile(href="/")
 						img(src=i + "logo.svg", alt="")
 				.footer__content
 					.footer__terms
-						a.footer__link(href="#") Terms & Conditions
+						a.footer__link(href="/terms-and-conditions.html" target="_blank") Terms & Conditions
 					p.
-						Jinni Lotto is operated by Jinni Tech Ltd of<br>First Floor, Jubilee Building, Victoria Street, Douglas,<br> Isle of Man, IM1 2SH
-					P.
-						Jinni Tech Ltd is licensed and regulated by the Isle<br>of Man Gambling Supervision Commission under<br>a licence issued under the Online Gambling Regulation Act 2001 on [ date and year]. Please note, this license is not applicable to players residing in the UK.
+						Jinni Lotto is operated by Jinni Tech Limited, a company registered in the Isle of Man with registered number 014940V and registered address at P.O Box 227 Clinch's House Lord Street Douglas Isle of Man IM99 1RZ. Jinni Tech Ltd is licensed and regulated by the Isle of Man Gambling Supervision Commission under a licence issued under the Online Gambling Regulation Act 2001 on [date and year].
 					p.
-						Jinni Tech Ltd does not operate a lottery. Members place bets on the outcome of national lotteries. Official lottery tickets and insurance are purchased based on the bets placed so that all winnings are equal to the cash option of national lottery winnings.
-					p.
-						Copyright © 2017, Jinni Tech Ltd All rights reserved<br>The National Lottery and Lotto are trademarks of the National Lottery Commission. EuroMillions is the trademark of Services aux Loteries en Europe.<br>Jinni Tech Ltd is not connected to or affiliated with<br>any body or organisation related to the National<br>Lottery or any other lottery.
+						jinnilotto.com domain and copyrights are owned by Jinni Tech Limited. Please note, this license is not applicable to players residing in the UK. Jinni Tech Ltd does not operate a lottery. Members place bets on the outcome of national lotteries. Official lottery tickets and insurance are purchased based on the bets placed so that all winnings are equal to the cash option of national lottery winnings. Copyright; 2017, Jinni Tech Ltd. All rights reserved. The National Lottery and Lotto are trademarks of the National Lottery Commission. EuroMillions is the trademark of Services aux Loteries en Europe. Jinni Tech Limited is not connected to or affiliated with any body or organisation related to the National Lottery or any other lottery.
 
-	#signupModal.modal.fade(tabindex='-1', role='dialog')
-		.modal-dialog.modal-dialog-centered(role='document')
-			.modal-content
-				.modal-header
-					button.close(type='button', data-dismiss='modal')
-						span ×
-				.modal-body
-					//- .jinniIframe(data-src="http://affiliates.jinnilotto.com/signup.html").js-load-iframe
-					iframe(src="http://affiliates.jinnilotto.com/signup.html")
-				.modal-footer
-					button.btn.btn-secondary(type='button', data-dismiss='modal') Close
-					button.btn.btn-primary(type='button') Save changes
+	//- #signupModal.modal.fade(tabindex='-1', role='dialog')
+	//- 	.modal-dialog.modal-dialog-centered(role='document')
+	//- 		.modal-content
+	//- 			.modal-header
+	//- 				button.close(type='button', data-dismiss='modal')
+	//- 					span ×
+	//- 			.modal-body
+	//- 				//- .jinniIframe(data-src="http://affiliates.jinnilotto.com/signup.html").js-load-iframe
+	//- 				iframe(src="http://affiliates.jinnilotto.com/signup.html")
+	//- 			.modal-footer
+	//- 				button.btn.btn-secondary(type='button', data-dismiss='modal') Close
+	//- 				button.btn.btn-primary(type='button') Save changes
+
 	//- #loginModal.modal.fade(tabindex='-1', role='dialog')
 	//- 	.modal-dialog.modal-dialog-centered(role='document')
 	//- 		.modal-content
