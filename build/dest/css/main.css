@@ -1039,6 +1039,20 @@ h6 {
 	font-weight: 600;
 }
 
+.join-form__error {
+	text-align: left;
+	padding-top: 5px;
+	color: #cf1e2b;
+	font-size: 12px;
+	line-height: 12px;
+	padding-top: 9px;
+	padding-left: 2px;
+	display: none;
+}
+.join-form__error.show {
+	display: block;
+}
+
 .join-form__thanks {
 	display: none;
 }
@@ -1216,6 +1230,10 @@ h6 {
 .join-form__group {
 	margin-bottom: 20px;
 	display: flex;
+	flex-direction: column;
+}
+.join-form__group--row {
+	flex-direction: row;
 }
 
 .ios .join-form__input::-webkit-input-placeholder {

@@ -32,10 +32,10 @@
 				<div class="collapse navbar-collapse" id="navbar">
 					<ul class="navbar-nav">
 						<li class="nav-item active">
-							<a class="nav-link" href="#">Open Account</a>
+							<a class="nav-link js-open-in-new-window" href="http://affiliates.jinnilotto.com/signup.html">Open Account</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link js-scroll-to" href="#commisions">Commisions</a>
+							<a class="nav-link js-scroll-to" href="#commisions">Commissions</a>
 						</li>
 						<li class="nav-item">
 							<a class="nav-link js-scroll-to" href="#tools">Tools</a>
@@ -148,7 +148,7 @@
 									<br>Contact us today and our affiliate manager will gladly discuss your CPA deal with you.</p>
 							</div>
 							<p>
-								<a class="simple-btn simple-btn--green simple-btn--bigger" href="#">let's talk</a>
+								<a class="simple-btn simple-btn--green simple-btn--bigger js-scroll-to" href="#contact-us">let's talk</a>
 							</p>
 						</div>
 					</div>
@@ -160,7 +160,7 @@
 									<br>Contact us today and our affiliate manager will gladly discuss your hybrid deal with you.</p>
 							</div>
 							<p>
-								<a class="simple-btn simple-btn--green simple-btn--bigger" href="#">let's talk</a>
+								<a class="simple-btn simple-btn--green simple-btn--bigger js-scroll-to" href="#contact-us">let's talk</a>
 							</p>
 						</div>
 					</div>
@@ -235,34 +235,37 @@
 						<span class="color-green">Let’s talk</span>:
 						<hr class="hr">
 					</div>
-					<form class="join-form js-join-on-submit" action="">
+					<form class="join-form js-join-on-submit" action="" novalidate>
 						<div class="join-form__thanks">Thank you for your message. A member of the team will aim to reply within 24 hours.</div>
 						<div class="join-form__content">
 							<div class="join-form__group">
 								<div class="join-form__input-wr">
 									<div class="icon icon--profile"></div>
 									<div class="mr-select-wr">
-										<select class="selectpicker join-form-select" name="title">
+										<select class="selectpicker join-form-select" name="title" required>
 											<option>Mr.</option>
 											<option>Mrs.</option>
 										</select>
 									</div>
-									<input class="join-form__input" type="text" placeholder="First Name" name="firstname">
+									<input class="join-form__input" type="text" placeholder="First Name" name="firstname" required data-error="#first-name-error">
 								</div>
+								<div class="join-form__error" id="first-name-error">First name is required.</div>
 							</div>
 							<div class="join-form__group">
 								<div class="join-form__input-wr">
 									<div class="icon icon--profile"></div>
-									<input class="join-form__input" type="text" placeholder="Last Name" name="lastname">
+									<input class="join-form__input" type="text" placeholder="Last Name" name="lastname" required data-error="#last-name-error">
 								</div>
+								<div class="join-form__error" id="last-name-error">Last name is required.</div>
 							</div>
 							<div class="join-form__group">
 								<div class="join-form__input-wr">
 									<div class="icon icon--envelope"></div>
-									<input class="join-form__input" type="text" placeholder="Email" name="email">
+									<input class="join-form__input" type="text" placeholder="Email" name="email" required data-error="#email-error">
 								</div>
+								<div class="join-form__error" id="email-error">Email is required.</div>
 							</div>
-							<div class="join-form__group">
+							<div class="join-form__group join-form__group--row">
 								<select class="selectpicker flag-select" name="phonePrefix">
 									<option data-content="&lt;div class='flag flag-icon flag-icon-af'&gt;&lt;/div&gt; +93" value="93">+93</option>
 									<option data-content="&lt;div class='flag flag-icon flag-icon-ax'&gt;&lt;/div&gt; +358" value="358">+358</option>
@@ -515,14 +518,16 @@
 							<div class="join-form__group">
 								<div class="join-form__input-wr">
 									<div class="icon icon--bubble"></div>
-									<input class="join-form__input" type="text" placeholder="Subject" name="subject">
+									<input class="join-form__input" type="text" placeholder="Subject" name="subject" required data-error="#subject-error">
 								</div>
+								<div class="join-form__error" id="subject-error">Subject is required.</div>
 							</div>
 							<div class="join-form__group">
 								<div class="join-form__textarea-wr">
 									<div class="icon icon--bubble"></div>
-									<textarea class="join-form__textarea" type="text" placeholder="Message" name="message"></textarea>
+									<textarea class="join-form__textarea" type="text" placeholder="Message" name="message" required data-error="#message-error"></textarea>
 								</div>
+								<div class="join-form__error" id="message-error">Message is required.</div>
 							</div>
 							<div class="join-form__btn-row">
 								<button class="simple-btn simple-btn--green simple-btn--bigger" type="submit">Send</button>

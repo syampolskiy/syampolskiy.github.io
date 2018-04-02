@@ -79,6 +79,33 @@ $(function() {
 
 		var form = $(this);
 
+		// check form for validity
+		var numberOfInvalidFields = 0;
+		var focused = false;
+
+		form.find('[required]').each(function() {
+			var field = $(this);
+
+			if (!field.val().trim().length) {
+				if (!focused) {
+					focused = true;
+
+					$('html, body').animate({
+						scrollTop: field.offset().top - 20
+					}, 500, function() {
+						field.focus();
+					});
+				}
+
+				$(field.data('error')).addClass('show');
+				numberOfInvalidFields++;
+			}
+		});
+		if (numberOfInvalidFields) {
+			return;
+		}
+
+		// send valid form
 		$.ajax({
 			type: 'post',
 			url: 'https://api.jinnilotto.com/affiliate/sendEmail/response.json',
@@ -94,6 +121,14 @@ $(function() {
 				console.log(data);
 			},
 		});
+	});
+
+	// remove error messages
+	$('.join-form__input, .join-form__textarea').on('keypress keyup', function() {
+		var error = $(this).data('error');
+		if (error) {
+			$(error).removeClass('show');
+		}
 	});
 	// submit join form --/
 });

@@ -621,6 +621,19 @@ h6{
 	}
 }
 .join-form{
+	&__error{
+		text-align: left;
+		padding-top: 5px;
+		color: #CF1E2B;
+		font-size: 12px;
+		line-height: 12px;
+		padding-top: 9px;
+		padding-left: 2px;
+		display: none;
+		&.show{
+			display: block;
+		}
+	}
 	&__thanks{
 		display: none;
 	}
@@ -753,6 +766,10 @@ h6{
 	&__group{
 		margin-bottom: 20px;
 		display: flex;
+		flex-direction: column;
+		&--row{
+			flex-direction: row;
+		}
 	}
 }
 
