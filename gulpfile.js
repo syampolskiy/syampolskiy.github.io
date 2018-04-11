@@ -53,7 +53,7 @@ gulp.task('pug', function() {
     gulp.src('build/src/markup/pages/*.pug')
         .pipe(pug())
         .pipe(prettify({
-            unformatted: [],
+            // unformatted: [],
             indent_char: '\t',
             indent_size: 1
         }))

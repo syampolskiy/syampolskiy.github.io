@@ -1447,8 +1447,12 @@ h4{
 		padding-top: 20px;
 	}
 	p{
-		display: inline-block;
-		vertical-align: top;
+		& + p {
+			margin-top: 27px;
+		}
+		& + ol{
+			margin-top: 27px;
+		}
 	}
 	&__header{
 		@include min(768){
@@ -1508,6 +1512,9 @@ ol {
 		padding-left: 29px;
 		ol{
 			padding-left: 0;
+			& + p{
+				margin-top: 27px;
+			}
 			li{
 				ol{
 					margin-left: -25px;
@@ -1558,8 +1565,29 @@ ol {
 		}
 	}
 }
+.alpha-list{
+	list-style-type: lower-alpha;
+	padding: 0;
+	counter-reset: alpha;
+	li{
+		padding-left: 29px !important;
+		&:before{
+			content: counter(alpha, lower-alpha) ".";
+			counter-increment: alpha;
+		}
+	}
+}
+.alpha-wrap{
+	margin: 27px 0;
+	ol{
+		margin-left: 0 !important;
+	}
+}
 .roman-wrap{
 	margin: 27px 0;
+	ol{
+		margin-left: 0 !important;
+	}
 }
 .tnc-last{
 	&__cptn{
@@ -1601,4 +1629,19 @@ ol {
 }
 .tnc-list-dots-wrap{
 	margin-top: 26px;
+}
+strong{
+	font-weight: 500;
+}
+.tnc-link{
+	color: #212529;
+	border-bottom: solid 0.5px #212529;
+	transition: .2s;
+	@include haf{
+		color: #212529;
+		border-color: transparent;
+	}
+	&:visited{
+		color: #212529;
+	}
 }

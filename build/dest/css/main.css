@@ -1988,9 +1988,11 @@ h4 {
 		padding-top: 20px;
 	}
 }
-.tnc p {
-	display: inline-block;
-	vertical-align: top;
+.tnc p + p {
+	margin-top: 27px;
+}
+.tnc p + ol {
+	margin-top: 27px;
 }
 @media (min-width: 768px) {
 	.tnc__header {
@@ -2057,6 +2059,9 @@ ol li:before {
 .tnc-major-list li ol {
 	padding-left: 0;
 }
+.tnc-major-list li ol + p {
+	margin-top: 27px;
+}
 .tnc-major-list li ol li ol {
 	margin-left: -25px;
 	margin-top: 28px;
@@ -2107,8 +2112,31 @@ ol li:before {
 	counter-increment: roman;
 }
 
+.alpha-list {
+	list-style-type: lower-alpha;
+	padding: 0;
+	counter-reset: alpha;
+}
+.alpha-list li {
+	padding-left: 29px !important;
+}
+.alpha-list li:before {
+	content: counter(alpha, lower-alpha) '.';
+	counter-increment: alpha;
+}
+
+.alpha-wrap {
+	margin: 27px 0;
+}
+.alpha-wrap ol {
+	margin-left: 0 !important;
+}
+
 .roman-wrap {
 	margin: 27px 0;
+}
+.roman-wrap ol {
+	margin-left: 0 !important;
 }
 
 .tnc-last__cptn {
@@ -2153,4 +2181,23 @@ ol li:before {
 
 .tnc-list-dots-wrap {
 	margin-top: 26px;
+}
+
+strong {
+	font-weight: 500;
+}
+
+.tnc-link {
+	color: #212529;
+	border-bottom: solid .5px #212529;
+	transition: .2s;
+}
+.tnc-link:hover,
+.tnc-link:active,
+.tnc-link:focus {
+	color: #212529;
+	border-color: transparent;
+}
+.tnc-link:visited {
+	color: #212529;
 }
