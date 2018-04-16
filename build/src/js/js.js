@@ -43,14 +43,17 @@ $(function() {
 
     // smooth scrolling
     $(".js-scroll-to").on('click', function(event) {
-        if (this.hash !== "") {
-            event.preventDefault();
-            var hash = this.hash;
-            $('html, body').animate({
-                scrollTop: $(hash).offset().top
-            }, 450, function() {
-                window.location.hash = hash;
-            });
+        var hash = this.hash;
+
+        if (hash !== "") {
+            if ($(hash).length){
+                event.preventDefault();
+                $('html, body').animate({
+                    scrollTop: $(hash).offset().top
+                }, 450, function() {
+                    window.location.hash = hash;
+                });
+            }
         }
     });
     // smooth scrolling --/
