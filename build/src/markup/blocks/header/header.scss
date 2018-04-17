@@ -110,7 +110,7 @@ select.selectpicker{
 		justify-content: space-between;
 		align-items: center;
 		@include max(767){
-			justify-content: center;
+			justify-content: space-between;
 		}
 	}
 	&__side{
@@ -124,6 +124,11 @@ select.selectpicker{
 			display: none;
 		}
 	}
+	&__side-mobile{
+		@include min(768){
+			display: none;
+		}
+	}
 }
 .logo{
 	img{
@@ -132,6 +137,16 @@ select.selectpicker{
 		@include max(767){
 			width: 65px;
 			height: 32px;
+		}
+	}
+}
+.text-btn{
+	font-weight: 500;
+	font-size: 14px;
+	&--green{
+		color: #46CF00;
+		@include haf{
+			color: #3EB800;
 		}
 	}
 }

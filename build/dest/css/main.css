@@ -240,7 +240,7 @@ select.selectpicker {
 }
 @media (max-width: 767px) {
 	.header__container {
-		justify-content: center;
+		justify-content: space-between;
 	}
 }
 .header__side {
@@ -256,6 +256,11 @@ select.selectpicker {
 		display: none;
 	}
 }
+@media (min-width: 768px) {
+	.header__side-mobile {
+		display: none;
+	}
+}
 
 .logo img {
 	height: 60px;
@@ -266,6 +271,19 @@ select.selectpicker {
 		width: 65px;
 		height: 32px;
 	}
+}
+
+.text-btn {
+	font-weight: 500;
+	font-size: 14px;
+}
+.text-btn--green {
+	color: #46cf00;
+}
+.text-btn--green:hover,
+.text-btn--green:active,
+.text-btn--green:focus {
+	color: #3eb800;
 }
 
 .menu {
